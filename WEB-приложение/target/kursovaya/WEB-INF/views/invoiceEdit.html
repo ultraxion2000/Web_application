@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name = "invoice" action="/updateInvoice" method="post">
+    <p>Product Id</p>
+    <input title = "ProductId" type="text" name="productId" th:value="${invoice.productId}" readonly>
+    <p>Delivery Id</p>
+    <input title = "DeliveryId" type="text" name="deliveryId" th:value="${invoice.deliveryId}" readonly>
+    <p>Count</p>
+    <input title = "Count" type="text" name="count" th:value="${invoice.count}">
+    <br><br>
+    <input type="submit" value="OK">
+</form>
+
+</body>
+</html>

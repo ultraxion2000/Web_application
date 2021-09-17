@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Table</title>
+
+<style type="text/css">
+th {
+  font-size: 13px;
+  font-weight: normal;
+  background: #b9c9fe;
+  border-top: 4px solid #aabcfe;
+  border-bottom: 1px solid white;
+  color: #039;
+  padding: 8px;
+}
+td {
+  background: #e8edff;
+  border-bottom: 1px solid white;
+  color: #669;
+  border-top: 1px solid transparent;
+  padding: 8px;
+}
+tr:hover td {
+  background: #ccddff;
+}
+
+.header-h1 h1 {
+    position: relative;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #00838f;
+  }
+  .header-h1 h1::before {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #00838f;
+    bottom: .25rem;
+    left: 50%;
+    width: 30%;
+    transform: translateX(-50%);
+  }
+  .header-h1 h1::after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #00838f;
+    bottom: 0;
+    left: 50%;
+    width: 15%;
+    transform: translateX(-50%);
+  }
+  .header-h1-left h1 {
+    text-align: left;
+  }
+  .header-h1-left h1::before,
+  .header-h1-left h1::after {
+    left: 0;
+    transform: translateX(0);
+  }
+  .header-h1-right h1 {
+    text-align: right;
+  }
+  .header-h1-right h1::before,
+  .header-h1-right h1::after {
+    left: unset;
+    right: 0;
+    transform: translateX(0);
+  }
+
+
+.a1 {
+    color: #008000; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+   }
+   .a1:visited {
+    color: #800080; /* Цвет посещённой ссылки */
+   } 
+   .a1:hover {
+    color: #800000; /* Цвет ссылки при наведении на нее курсора мыши */  
+    text-decoration: underline; /* Добавляем подчеркивание */
+   }
+</style>
+</head>
+
+<body>
+<div class="header-h1 header-h1-left">
+<h1> PRODUCT TABLE </h1>
+</div>
+<h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+
+        <tr th:each ="product : ${products}">
+            <td th:utext="${product.id}"></a>...</td>
+            <td th:utext="${product.name}">...</td>
+            <td th:utext="${product.price}">...</td>
+
+        </tr>
+    </table>
+
+    <h3>  <p> <a class="a1" href="/auto"> Log in as admin </a> </h3>
+
+
+</h3>
+
+</body>
+</html>

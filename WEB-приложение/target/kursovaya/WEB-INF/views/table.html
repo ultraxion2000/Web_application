@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h2> TABLE TABLE </h2>
+
+<h3>
+
+  <table border="1">
+
+    <tr>
+      <th>Id</th>
+      <th>Table Delivery Id</th>
+    </tr>
+
+    <tr th:each ="table : ${tables}">
+      <td th:utext="${table.id}">...</td>
+      <td th:utext="${table.pillowDelivery}">...</td>
+      <td> <a th:href="@{/tableDelete/{id}(id=${table.id})}"> delete </a></td>
+    </tr>
+  </table>
+
+
+  <h3>  <p> <a href="/addtable"> Add </a> &emsp; <a href="/index.jsp"> Menu </a></h3>
+
+</h3>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name = "delivery" action="/updateDelivery" method="post">
+    <p>Id</p>
+    <input title = "Id" type="text" name="id" th:value="${delivery.id}" readonly>
+    <p>Date</p>
+    <input title = "Date" type="text" name="date" th:value="${delivery.date}">
+    <p>Price</p>
+    <input title = "Price" type="text" name="price" th:value="${delivery.price}">
+    <br><br>
+    <input type="submit" value="OK">
+</form>
+
+
+</body>
+</html>
