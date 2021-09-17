@@ -7,4 +7,4 @@
 
 ## Использовано:
 > * java
-![alt text](screenshots/2.png "Описание будет тут")
+
